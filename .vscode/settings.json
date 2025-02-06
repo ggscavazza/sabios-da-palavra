@@ -1,0 +1,6 @@
+{
+    "Lua.workspace.library": [
+        "D:/Programas Games/LOVE"  // Altere o caminho conforme onde o LÖVE está instalado
+    ],
+    "Lua.diagnostics.globals": ["love"]
+}
