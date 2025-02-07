@@ -1,8 +1,21 @@
+local SceneManager = require("game.scene_manager")
+local Login = require("game.login")
+
 function love.load()
-    love.window.setTitle("Jogo Bíblico")
-    love.window.setMode(800, 600) -- Definir tamanho da tela
+    love.window.setTitle("Sábios da Palavra")
+    love.window.setMode(800, 600)
+    SceneManager:add("login", Login)
+    SceneManager:switch("login")
+end
+
+function love.update(dt)
+    SceneManager:update(dt)
 end
 
 function love.draw()
-    love.graphics.print("Bem-vindo ao Jogo Bíblico!", 300, 280)
+    SceneManager:draw()
+end
+
+function love.keypressed(key)
+    SceneManager:keypressed(key)
 end
